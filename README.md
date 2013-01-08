@@ -1,4 +1,4 @@
-algos
-=====
+Algorithms-for-TopCoder
+=======================
 
-Various algorithms by self constructed.
+I use these algorithms for topcoder SRM. And I will write more codes in C++.
