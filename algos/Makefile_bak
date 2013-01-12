@@ -1,0 +1,26 @@
+CXX=g++
+LIBS=-L.
+SHARED=-shared
+TARGETS=reverse isAnagram
+
+#all : $(TARGETS)
+
+all : 
+	for TARGET in $(TARGETS); do \
+		echo ${TARGET} \ 
+	done
+
+#		$(CXX) $(SHARED) -o lib$(TARGET).so ($TARGET).cc \
+#		$(CXX) -o ($TARGET) $(TARGET)Test.cc -l$(TARGET) $(LIBS) \
+
+#reverse : reverse.cc
+#	$(CXX) $(SHARED) -o libreverse.so reverse.cc
+#	$(CXX) -o reverse reverseTest.cc -lreverse $(LIBS) 
+
+#isAnagram : isAnagram.cc
+#	$(CXX) $(SHARED) -o libreverse.so isAnagram.cc
+#	$(CXX) -o isAnagram isAnagramTest.cc -lreverse $(LIBS) 
+
+
+clean :
+	rm $(TARGET)
