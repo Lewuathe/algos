@@ -1,6 +1,6 @@
 CXX=g++
 LIBS=-lcppunit
-SOURCES=reverseTest.cc isAnagramTest.cc compStrTest.cc kFromBackTest.cc deleteMidTest.cc
+SOURCES=reverseTest.cc isAnagramTest.cc compStrTest.cc kFromBackTest.cc deleteMidTest.cc moveSmallerTest.cc
 TARGET=algosTest
 
 all :
