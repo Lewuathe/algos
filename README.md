@@ -1,4 +1,4 @@
-Algorithms-for-TopCoder
+Selfmade algorithms writen in mainly C++ and Python
 =======================
 
 I use these algorithms for topcoder SRM. And I will write more codes in C++.
