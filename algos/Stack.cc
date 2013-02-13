@@ -28,9 +28,18 @@ public:
 		top = top->next;
 		return retValue;
 	}
+
+	int peek(){
+		return top->id;
+	}
+
+	bool isEmpty(){
+		return top == NULL;
+	}
 };
 
 
+#if defined(MAIN_TEST)
 int main(void){
 	Stack *st = new Stack();
 
@@ -43,3 +52,4 @@ int main(void){
 	std::cout << st->pop() << std::endl;
 	return 0;
 }
+#endif

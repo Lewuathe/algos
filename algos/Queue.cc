@@ -38,6 +38,7 @@ public:
 	}
 };
 
+#if defined(MAIN_TEST)
 int main(void){
 	Queue *qu = new Queue();
 
@@ -50,3 +51,4 @@ int main(void){
 	std::cout << qu->dequeue() << std::endl;
 	return 0;
 }
+#endif
