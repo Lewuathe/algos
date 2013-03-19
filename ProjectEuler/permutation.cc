@@ -8,12 +8,15 @@ using namespace std;
 
 static string nthBase(int n, int nth);
 
-vector<int> genPermutation(int n, int r) {
+vector<string> genPermutation(int n, int r) {
+  vector<string> res;
   int last = pow(n, r);
-  
+
   for( int i = 0 ; i < last ; i++ ) {
-    cout << nthBase(i, n) << " ";
+    res.push_back(nthBase(i, n));
   }
+
+  return res;
 }
 
 
