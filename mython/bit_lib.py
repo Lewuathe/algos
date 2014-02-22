@@ -16,8 +16,13 @@ def clear_bit(num, i):
     mask = ~(1 << i)
     return num & mask
 
+def update_bit(num, i, v):
+    mask = ~(1 << i)
+    return (num & mask) | (v << i)
+
 if __name__ == "__main__":
     print format(10, 'b')
     print get_bit(10, 1)
     print format(set_bit(10, 2), 'b')
     print format(clear_bit(10, 1), 'b')
+    print format(update_bit(10, 0, 1), 'b')
