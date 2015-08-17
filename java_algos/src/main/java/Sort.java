@@ -37,23 +37,25 @@ public class Sort {
     }
 
     public static void qsort(int[] list, int left, int right) {
-        if (right - left <= 1) {
+        if ((right - left) <= 1) {
             return;
         }
 
         int half = (right + left) / 2;
         int pivot = list[half];
-        int r = right - 1;
+        int r = right;
         int l = left;
         while (l < r) {
             while (list[r] > pivot) r--;
             while (list[l] < pivot) l++;
-            swap(list, r, l);
-            r--;
-            l++;
+            if (l < r) {
+                swap(list, r, l);
+                r--;
+                l++;
+            }
         }
-        qsort(list, left, half);
-        qsort(list, half, right);
+        qsort(list, left, r);
+        qsort(list, l, right);
     }
 
     public static void swap(int[] list, int i, int j) {
@@ -63,8 +65,8 @@ public class Sort {
     }
 
     public static void main(String[] args) {
-        int[] l = {9,8,7,6,5,4,3,2,1,0};
-        //qsort(l, 0, l.length);
+        int[] l = {5,4,6,1,3,7,8,2,4,7,1,3};
+//        qsort(l, 0, l.length -1);
         msort(l);
         for (int i = 0; i < l.length; i++) {
             System.out.printf("%d ", l[i]);
